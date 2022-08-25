@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Day 51 Morning Challenge</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="popup">Just a usual message</div>
+      <div id="card">
+        <button id="msg" class="btn">Notification message</button>
+        <button id="alert" class="btn">Notification alert</button>
+      </div>
+    </div>
+    <script>
+      let hovered = false;
+      const popup = document.querySelector("#popup");
+      const msgBtn = document.querySelector("#msg");
+      const alertBtn = document.querySelector("#alert");
+      let removeTimeout;
+      function onHover() {
+        popup.style.opacity = 100;
+        removeTimeout = setTimeout(() => {
+          popup.style.opacity = 0;
+        }, 2000);
+      }
+      msgBtn.addEventListener("click", onHover);
+      alertBtn.addEventListener("click", onHover);
+      popup.addEventListener("mouseover", (e) => {
+        clearTimeout(removeTimeout);
+      });
+      popup.addEventListener("mouseleave", (e) => {
+        popup.style.opacity = 0;
+      });
+    </script>
+  </body>
+</html>

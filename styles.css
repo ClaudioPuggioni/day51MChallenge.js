@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand";
+}
+
+#container {
+  height: 100%x;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #1f806a;
+}
+
+#popup {
+  position: absolute;
+  top: 0;
+
+  padding: 16px 17px;
+
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+
+  opacity: 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+
+  transition: opacity ease-out 77ms;
+}
+
+#card {
+  height: 125px;
+  width: 348px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+.btn {
+  padding: 13px 12.5px;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+
+  border: none;
+  border-radius: 3px;
+  background-color: #e0e0e0;
+}
+#msg {
+}
+#alert {
+}
